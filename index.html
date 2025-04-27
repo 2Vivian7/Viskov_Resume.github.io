@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме WEB-разработчика | Хайтек</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css для плавных анимаций -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        body {
+            background-color: #0a192f;
+            color: #e6f1ff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .resume-container {
+            padding: 2rem;
+        }
+        .tile {
+            background: rgba(10, 25, 47, 0.8);
+            border: 1px solid #1e2a3a;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: #64ffda;
+        }
+        .tile.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .tile h3 {
+            color: #64ffda;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #233554;
+            padding-bottom: 0.5rem;
+        }
+        .tile-hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            border-bottom: 1px solid #233554;
+        }
+        .header h1 {
+            color: #e6f1ff;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .header p {
+            color: #64ffda;
+            font-size: 1.2rem;
+        }
+        .skill-badge {
+            background-color: #112240;
+            color: #64ffda;
+            border: 1px solid #64ffda;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: normal;
+        }
+        .contact-info a {
+            color: #e6f1ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .contact-info a:hover {
+            color: #64ffda;
+        }
+    </style>
+</head>
+<body>
+    <div class="container resume-container">
+        <!-- Шапка резюме -->
+        <div class="header animate__animated animate__fadeIn">
+            <h1>Иван Петров</h1>
+            <p>Веб-разработчик | Full-stack</p>
+        </div>
+
+        <!-- Основные плитки -->
+        <div class="row">
+            <!-- О себе -->
+            <div class="col-md-6 tile animate__animated" id="about">
+                <h3>О себе</h3>
+                <p>Full-stack разработчик с 5-летним опытом работы. Специализируюсь на создании современных веб-приложений с использованием React, Node.js и облачных технологий.</p>
+                <p>Увлечен созданием чистого, эффективного кода и интуитивно понятных пользовательских интерфейсов.</p>
+            </div>
+
+            <!-- Контакты -->
+            <div class="col-md-6 tile animate__animated" id="contacts">
+                <h3>Контакты</h3>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:ivan.petrov@example.com">ivan.petrov@example.com</a></p>
+                    <p><strong>Телефон:</strong> <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/ivanpetrov" target="_blank">github.com/ivanpetrov</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ivanpetrov" target="_blank">linkedin.com/in/ivanpetrov</a></p>
+                </div>
+            </div>
+
+            <!-- Навыки -->
+            <div class="col-md-6 tile animate__animated" id="skills">
+                <h3>Технические навыки</h3>
+                <div>
+                    <span class="badge skill-badge">JavaScript (ES6+)</span>
+                    <span class="badge skill-badge">TypeScript</span>
+                    <span class="badge skill-badge">React</span>
+                    <span class="badge skill-badge">Node.js</span>
+                    <span class="badge skill-badge">Express</span>
+                    <span class="badge skill-badge">MongoDB</span>
+                    <span class="badge skill-badge">PostgreSQL</span>
+                    <span class="badge skill-badge">Docker</span>
+                    <span class="badge skill-badge">AWS</span>
+                    <span class="badge skill-badge">Git</span>
+                    <span class="badge skill-badge">HTML5/CSS3</span>
+                    <span class="badge skill-badge">SASS</span>
+                    <span class="badge skill-badge">Bootstrap</span>
+                </div>
+            </div>
+
+            <!-- Опыт работы -->
+            <div class="col-md-6 tile animate__animated" id="experience">
+                <h3>Опыт работы</h3>
+                <div class="mb-3">
+                    <h5>Senior Full-stack Developer</h5>
+                    <p><em>TechSolutions Inc. | 2020 - настоящее время</em></p>
+                    <ul>
+                        <li>Разработка и поддержка веб-приложений для корпоративных клиентов</li>
+                        <li>Оптимизация производительности приложений</li>
+                        <li>Руководство командой из 3 разработчиков</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Web Developer</h5>
+                    <p><em>Digital Agency "WebArt" | 2018 - 2020</em></p>
+                    <ul>
+                        <li>Создание адаптивных веб-сайтов</li>
+                        <li>Интеграция с CMS системами</li>
+                        <li>Участие в полном цикле разработки</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Образование -->
+            <div class="col-md-6 tile animate__animated" id="education">
+                <h3>Образование</h3>
+                <div>
+                    <h5>Магистр компьютерных наук</h5>
+                    <p><em>Национальный Исследовательский Университет | 2016 - 2018</em></p>
+                </div>
+                <div>
+                    <h5>Бакалавр информационных технологий</h5>
+                    <p><em>Технический Университет | 2012 - 2016</em></p>
+                </div>
+            </div>
+
+            <!-- Проекты -->
+            <div class="col-md-6 tile animate__animated" id="projects">
+                <h3>Проекты</h3>
+                <div class="mb-3">
+                    <h5>E-commerce Platform</h5>
+                    <p>Полнофункциональная платформа электронной коммерции с панелью администратора, системой оплаты и аналитикой.</p>
+                    <p><strong>Технологии:</strong> React, Node.js, MongoDB, Stripe API</p>
+                </div>
+                <div>
+                    <h5>Task Management App</h5>
+                    <p>Приложение для управления задачами с возможностью совместной работы в реальном времени.</p>
+                    <p><strong>Технологии:</strong> Vue.js, Firebase, WebSockets</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Скрипты -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Анимация появления плиток при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            const tiles = document.querySelectorAll('.tile');
+            
+            // Задержка для каждой плитки
+            tiles.forEach((tile, index) => {
+                setTimeout(() => {
+                    tile.classList.add('animate__fadeInUp');
+                    tile.classList.add('visible');
+                }, 150 * index);
+            });
+
+            // Анимация при скроллинге
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.scrollY;
+                const windowHeight = window.innerHeight;
+                
+                tiles.forEach(tile => {
+                    const tilePosition = tile.getBoundingClientRect().top;
+                    
+                    if (tilePosition < windowHeight * 0.75) {
+                        tile.classList.add('visible');
+                    } else {
+                        tile.classList.remove('visible');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
