@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Резюме WEB-разработчика | Хайтек</title>
+    <title>Висков Иван | Резюме</title>
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Animate.css для плавных анимаций -->
@@ -13,24 +13,29 @@
             background-color: #0a192f;
             color: #e6f1ff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
         }
         .resume-container {
-            padding: 2rem;
+            padding: 3rem 2rem;
+        }
+        .tile-row {
+            margin-bottom: 2rem;
         }
         .tile {
             background: rgba(10, 25, 47, 0.8);
             border: 1px solid #1e2a3a;
             border-radius: 10px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(30px);
+            height: 100%;
         }
         .tile:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
             border-color: #64ffda;
         }
         .tile.visible {
@@ -39,144 +44,206 @@
         }
         .tile h3 {
             color: #64ffda;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             border-bottom: 1px solid #233554;
-            padding-bottom: 0.5rem;
-        }
-        .tile-hidden {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.5s ease;
+            padding-bottom: 0.75rem;
         }
         .header {
             text-align: center;
-            margin-bottom: 3rem;
-            padding: 2rem 0;
+            margin-bottom: 4rem;
+            padding: 3rem 0;
             border-bottom: 1px solid #233554;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+        .header.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         .header h1 {
             color: #e6f1ff;
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
         }
         .header p {
             color: #64ffda;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
         }
         .skill-badge {
             background-color: #112240;
             color: #64ffda;
             border: 1px solid #64ffda;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
+            margin-right: 0.75rem;
+            margin-bottom: 0.75rem;
             font-weight: normal;
+            padding: 0.5rem 0.8rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        .skill-badge:hover {
+            background-color: #64ffda;
+            color: #0a192f;
+            transform: scale(1.05);
         }
         .contact-info a {
             color: #e6f1ff;
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-bottom: 0.5rem;
         }
         .contact-info a:hover {
             color: #64ffda;
+            transform: translateX(5px);
+        }
+        ul {
+            padding-left: 1.2rem;
+        }
+        ul li {
+            margin-bottom: 0.7rem;
+            position: relative;
+            list-style-type: none;
+        }
+        ul li:before {
+            content: "▹";
+            position: absolute;
+            left: -1.2rem;
+            color: #64ffda;
+        }
+        .animate-delay-1 {
+            animation-delay: 0.1s !important;
+        }
+        .animate-delay-2 {
+            animation-delay: 0.2s !important;
+        }
+        .animate-delay-3 {
+            animation-delay: 0.3s !important;
+        }
+        .animate-delay-4 {
+            animation-delay: 0.4s !important;
+        }
+        .animate-delay-5 {
+            animation-delay: 0.5s !important;
         }
     </style>
 </head>
 <body>
     <div class="container resume-container">
         <!-- Шапка резюме -->
-        <div class="header animate__animated animate__fadeIn">
-            <h1>Иван Петров</h1>
-            <p>Веб-разработчик | Full-stack</p>
+        <div class="header" id="main-header">
+            <h1>Висков Иван Алексеевич</h1>
+            <p>Веб-разработчик | Full-stack middle</p>
         </div>
 
         <!-- Основные плитки -->
-        <div class="row">
+        <div class="row tile-row">
             <!-- О себе -->
-            <div class="col-md-6 tile animate__animated" id="about">
+            <div class="col-lg-6 tile" id="about">
                 <h3>О себе</h3>
-                <p>Full-stack разработчик с 5-летним опытом работы. Специализируюсь на создании современных веб-приложений с использованием React, Node.js и облачных технологий.</p>
-                <p>Увлечен созданием чистого, эффективного кода и интуитивно понятных пользовательских интерфейсов.</p>
+                <p>Full-stack разработчик с 1.5-летним опытом работы. Специализируюсь на создании современных веб-приложений с использованием PHP.</p>
+                <p>Увлечен созданием чистого, эффективного кода и интуитивно понятных пользовательских интерфейсов. Постоянно совершенствую свои навыки и изучаю новые технологии.</p>
+                <p>Имею небольшой опыт наставничества и работы в Agile-среде.</p>
             </div>
+
+            <div class="col-lg-1"></div>
 
             <!-- Контакты -->
-            <div class="col-md-6 tile animate__animated" id="contacts">
+            <div class="col-lg-5 tile" id="contacts">
                 <h3>Контакты</h3>
                 <div class="contact-info">
-                    <p><strong>Email:</strong> <a href="mailto:ivan.petrov@example.com">ivan.petrov@example.com</a></p>
-                    <p><strong>Телефон:</strong> <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
-                    <p><strong>GitHub:</strong> <a href="https://github.com/ivanpetrov" target="_blank">github.com/ivanpetrov</a></p>
-                    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ivanpetrov" target="_blank">linkedin.com/in/ivanpetrov</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:viskov.ivan2016@yandex.ru">viskov.ivan2016@yandex.ru</a></p>
+                    <p><strong>Телефон:</strong> <a href="tel:+79991234567">+7 (960) 974-63-22</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/2Vivian7" target="_blank">github.com/2Vivian7</a></p>
                 </div>
             </div>
+        </div>
 
+        <div class="row tile-row">
             <!-- Навыки -->
-            <div class="col-md-6 tile animate__animated" id="skills">
+            <div class="col-lg-3 tile" id="skills">
                 <h3>Технические навыки</h3>
                 <div>
-                    <span class="badge skill-badge">JavaScript (ES6+)</span>
-                    <span class="badge skill-badge">TypeScript</span>
-                    <span class="badge skill-badge">React</span>
+                    <span class="badge skill-badge">JavaScript</span>
                     <span class="badge skill-badge">Node.js</span>
-                    <span class="badge skill-badge">Express</span>
-                    <span class="badge skill-badge">MongoDB</span>
-                    <span class="badge skill-badge">PostgreSQL</span>
+                    <span class="badge skill-badge">SQL</span>
+                    <span class="badge skill-badge">MySQL</span>
+                    <span class="badge skill-badge">MSSQL</span>
                     <span class="badge skill-badge">Docker</span>
-                    <span class="badge skill-badge">AWS</span>
+                    <span class="badge skill-badge">Docker Compose</span>
                     <span class="badge skill-badge">Git</span>
+                    <span class="badge skill-badge">GitLab</span>
                     <span class="badge skill-badge">HTML5/CSS3</span>
-                    <span class="badge skill-badge">SASS</span>
                     <span class="badge skill-badge">Bootstrap</span>
+                    <span class="badge skill-badge">REST API</span>
+                    <span class="badge skill-badge">Graphana</span>
+                    <span class="badge skill-badge">Sentry</span>
+                    <span class="badge skill-badge">CI/CD</span>
+                    <span class="badge skill-badge">Linux</span>
+                    <span class="badge skill-badge">VUE</span>
+                    <span class="badge skill-badge">JQuery</span>
+                    <span class="badge skill-badge">Ajax</span>
+                    <span class="badge skill-badge">PHP</span>
+                    <span class="badge skill-badge">PHP/Kohana</span>
+                    <span class="badge skill-badge">PHP/Laravel</span>
+                    <span class="badge skill-badge">MVC</span>
                 </div>
             </div>
 
+            <div class="col-lg-1"></div>
+
             <!-- Опыт работы -->
-            <div class="col-md-6 tile animate__animated" id="experience">
+            <div class="col-lg-8 tile" id="experience">
                 <h3>Опыт работы</h3>
-                <div class="mb-3">
-                    <h5>Senior Full-stack Developer</h5>
-                    <p><em>TechSolutions Inc. | 2020 - настоящее время</em></p>
+                <div class="mb-4">
+                    <h5>Программист</h5>
+                    <p><em>АО "Стройсервис" | 2024 - настоящее время</em></p>
                     <ul>
                         <li>Разработка и поддержка веб-приложений для корпоративных клиентов</li>
                         <li>Оптимизация производительности приложений</li>
-                        <li>Руководство командой из 3 разработчиков</li>
-                    </ul>
-                </div>
-                <div>
-                    <h5>Web Developer</h5>
-                    <p><em>Digital Agency "WebArt" | 2018 - 2020</em></p>
-                    <ul>
-                        <li>Создание адаптивных веб-сайтов</li>
-                        <li>Интеграция с CMS системами</li>
-                        <li>Участие в полном цикле разработки</li>
+                        <li>Работа с базой данных</li>
+                        <li>Внедрение и использование CI/CD процессов</li>
+                        <li>Оптимизация процессов разработки</li>
+                        <li>Интеграция и использование микросервисной архитектуры</li>
                     </ul>
                 </div>
             </div>
+        </div>
 
+        <div class="row tile-row">
             <!-- Образование -->
-            <div class="col-md-6 tile animate__animated" id="education">
+            <div class="col-lg-12 tile" id="education">
                 <h3>Образование</h3>
-                <div>
-                    <h5>Магистр компьютерных наук</h5>
-                    <p><em>Национальный Исследовательский Университет | 2016 - 2018</em></p>
+                <div class="mb-4">
+                    <h5>Магистр "Прикладная информатика" (В процессе)</h5>
+                    <p><em>Кемеровский государственный университет | 2024 - настоящее время</em></p>
+                    <p>Тема диссертации: "Реализация и внедрение на предприятии электронных путевых листов"</p>
                 </div>
                 <div>
-                    <h5>Бакалавр информационных технологий</h5>
-                    <p><em>Технический Университет | 2012 - 2016</em></p>
+                    <h5>Бакалавр с отличием 'Электроника и наноэлектроника' (Программирование микропроцессорной техники)</h5>
+                    <p><em>Томский государственный университет систем управления и радиоэлектроники | 2020 - 2024</em></p>
+                    <p>Тема бакалаврской работы: 'Программное обеспечение управления проектами
+                        "Канбан доска" на основе методологии Agile'
                 </div>
             </div>
+        </div>
 
-            <!-- Проекты -->
-            <div class="col-md-6 tile animate__animated" id="projects">
+        <div class="row tile-row">
+            <div class="col-lg-12 tile" id="projects">
                 <h3>Проекты</h3>
-                <div class="mb-3">
-                    <h5>E-commerce Platform</h5>
-                    <p>Полнофункциональная платформа электронной коммерции с панелью администратора, системой оплаты и аналитикой.</p>
-                    <p><strong>Технологии:</strong> React, Node.js, MongoDB, Stripe API</p>
+                <div class="mb-4">
+                    <h5>Kanban доска</h5>
+                    <p>Полнофункциональная платформа отслеживаня задач работников.</p>
+                    <p><strong>Технологии:</strong> PHP, Node.js, MSSQL, Bootstrap, JQuery, Ajax</p>
+                    <p><strong>Особенности:</strong> Реализовал систему обновления в реальном времени, убрав перезагрузку страницы при обновлении данных на доске</p>
                 </div>
                 <div>
-                    <h5>Task Management App</h5>
-                    <p>Приложение для управления задачами с возможностью совместной работы в реальном времени.</p>
-                    <p><strong>Технологии:</strong> Vue.js, Firebase, WebSockets</p>
+                    <h5>Электронные путевые листы</h5>
+                    <p>Телеграм бот для заполнения и закрытия ЭПЛ.</p>
+                    <p><strong>Технологии:</strong> PHP, MSSQL, Bootstrap, JQuery</p>
+                    <p><strong>Особенности:</strong> Интеграции с 1с, корпоративным сайтом и расчёт многих данных на стороне Telegram бота</p>
                 </div>
             </div>
         </div>
@@ -185,32 +252,59 @@
     <!-- Скрипты -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Анимация появления плиток при загрузке
         document.addEventListener('DOMContentLoaded', function() {
-            const tiles = document.querySelectorAll('.tile');
-            
-            // Задержка для каждой плитки
-            tiles.forEach((tile, index) => {
-                setTimeout(() => {
-                    tile.classList.add('animate__fadeInUp');
-                    tile.classList.add('visible');
-                }, 150 * index);
-            });
+            // Анимация шапки
+            const header = document.getElementById('main-header');
+            setTimeout(() => {
+                header.classList.add('visible');
+            }, 100);
 
-            // Анимация при скроллинге
-            window.addEventListener('scroll', function() {
-                const scrollPosition = window.scrollY;
-                const windowHeight = window.innerHeight;
-                
-                tiles.forEach(tile => {
-                    const tilePosition = tile.getBoundingClientRect().top;
-                    
-                    if (tilePosition < windowHeight * 0.75) {
-                        tile.classList.add('visible');
-                    } else {
-                        tile.classList.remove('visible');
+            // Анимация плиток
+            const tiles = document.querySelectorAll('.tile');
+            const tileRows = document.querySelectorAll('.tile-row');
+            
+            // Функция для проверки видимости элемента
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.75
+                );
+            }
+
+            // Функция для обработки появления элементов
+            function handleScroll() {
+                tileRows.forEach((row, rowIndex) => {
+                    if (isElementInViewport(row)) {
+                        const tilesInRow = row.querySelectorAll('.tile');
+                        tilesInRow.forEach((tile, tileIndex) => {
+                            setTimeout(() => {
+                                tile.classList.add('visible');
+                                tile.classList.add('animate__animated');
+                                tile.classList.add('animate__fadeInUp');
+                                tile.classList.add(`animate-delay-${tileIndex}`);
+                            }, 150 * tileIndex);
+                        });
                     }
                 });
+            }
+
+            // Инициализация при загрузке
+            handleScroll();
+
+            // Обработка скролла
+            window.addEventListener('scroll', function() {
+                handleScroll();
+            });
+
+            // Запускаем анимацию для первой строки сразу
+            const firstRowTiles = tileRows[0].querySelectorAll('.tile');
+            firstRowTiles.forEach((tile, index) => {
+                setTimeout(() => {
+                    tile.classList.add('visible');
+                    tile.classList.add('animate__animated');
+                    tile.classList.add('animate__fadeInUp');
+                    tile.classList.add(`animate-delay-${index}`);
+                }, 300 + 150 * index);
             });
         });
     </script>
